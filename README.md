@@ -1,5 +1,7 @@
 # CSS Flexbox essentials
 
+[A Visual Guide to CSS3 Flexbox Properties](https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties)
+
 ## 1. Introduction
 
 ### What is Flexbox
@@ -14,7 +16,7 @@ The CSS properties can be roughly divided into 2 categories
 - container
 - item
 
-### Flexbox Container
+### Flexbox container
 ``` css
 .flex-container {
   display:flex;
@@ -41,9 +43,41 @@ The CSS properties can be roughly divided into 2 categories
   flow-direction:column;
 }
 ```
-### Order
+### Reorder the content (items)
 ```css
-.item {
+.item1 {
   order: 3;
 }
+.item2 {
+  order: 1;
+}
 ```
+### Content spacing
+```css
+.item {
+  margin: 20px;
+  padding; 10px;
+}
+```
+### Wrapping content
+```css
+.flex-container{
+  flex-wrap: wrap(-reverse);
+}
+```
+### Flex-flow shorthand
+```css
+.flex-container {
+  // flex-direction: row;
+  // flex-wrap: wrap
+  flex-flow: row wrap;
+}
+
+.item {
+  // flex-grow: 1;
+  // flex-shrink: 2;
+  // flex-basis: 150px
+  flex: 1 2 150px
+}
+```
+### Cross-Axis alignment
